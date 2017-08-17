@@ -6,7 +6,7 @@ public class Department {
 
     // randomly assign student to a group
     // data not available in DB, for presentation purpose
-    public static String assignStudent(){
+    public static String assign(){
         int i = (int)(Math.random()*10);
         switch (i){
             case 0: department = "Aeronautics and Astronautics";
