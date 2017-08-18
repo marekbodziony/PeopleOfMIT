@@ -6,16 +6,19 @@ public class Person {
 
     private int id;
     private String name;
+    private String gender;
     private String phone;
     private String mail;
     private GregorianCalendar dateOfBirth;
     private String department;
     private String imageURL;
+    private boolean favourite;
 
     // constructor
-    public Person(String name, int id, String phone, String mail, GregorianCalendar dateOfBirth, String imageURL){
-        this.name = name;
+    public Person(int id, String name, String gender, String phone, String mail, GregorianCalendar dateOfBirth, String imageURL){
         this.id = id;
+        this.name = name;
+        this.gender = gender;
         this.phone = phone;
         this.mail = mail;
         department = Department.assign();
@@ -31,5 +34,8 @@ public class Person {
     public GregorianCalendar getDateOfBirth() {return dateOfBirth;}
     public String getDepartment() {return department;}
     public String getImageURL() {return imageURL;}
+    public boolean getFavourite() {return favourite;}
 
+    // setters
+    public void setFavourite(boolean favourite){ this.favourite = favourite;}
 }

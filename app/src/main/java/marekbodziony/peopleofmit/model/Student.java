@@ -8,8 +8,8 @@ public class Student extends Person {
     private int yearOfStudy;
 
     // constructor
-    public Student(String name, int id, String phone, String mail, GregorianCalendar dateOfBirth, String imageURL){
-        super(name, id, phone, mail, dateOfBirth, imageURL);
+    public Student(int id, String name, String gender, String phone, String mail, GregorianCalendar dateOfBirth, String imageURL){
+        super(id, name, gender, phone, mail, dateOfBirth, imageURL);
         yearOfStudy = setRandomYearOfStudy();
     }
 

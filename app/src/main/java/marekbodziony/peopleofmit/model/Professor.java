@@ -5,10 +5,12 @@ import java.util.GregorianCalendar;
 
 public class Professor extends Person{
 
+    private String title;
     private int yearsOfWork;
 
-    public Professor(String name, int id, String phone, String mail, GregorianCalendar dateOfBirth, String imageURL) {
-        super(name, id, phone, mail, dateOfBirth, imageURL);
+    public Professor(int id, String name, String gender , String phone, String mail, GregorianCalendar dateOfBirth, String imageURL) {
+        super(id, name, gender, phone, mail, dateOfBirth, imageURL);
+        title = setRandomAcademicTitle();
         yearsOfWork = setRandomYearsOfWork();
     }
 
@@ -23,5 +25,15 @@ public class Professor extends Person{
             i = (int)(Math.random()*10);
         }
         return i;
+    }
+    // randomly set professor academic title
+    // data not available in DB, for presentation purpose
+    private String setRandomAcademicTitle(){
+        String [] titles = {"PhD","MSc","EdD"};
+        int i = 0;
+        while(i > titles.length){
+            i = (int)(Math.random()*10);
+        }
+        return titles[i];
     }
 }
