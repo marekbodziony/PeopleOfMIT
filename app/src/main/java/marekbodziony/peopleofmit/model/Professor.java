@@ -15,7 +15,10 @@ public class Professor extends Person{
     }
 
     // getter
+    public String getTitle() {return title;}
     public int getYearsOfWork() {return yearsOfWork;}
+
+
 
     // randomly set professor year of work
     // data not available in DB, for presentation purpose
@@ -31,7 +34,7 @@ public class Professor extends Person{
     private String setRandomAcademicTitle(){
         String [] titles = {"PhD","MSc","EdD"};
         int i = 0;
-        while(i > titles.length){
+        while(i >= titles.length){
             i = (int)(Math.random()*10);
         }
         return titles[i];

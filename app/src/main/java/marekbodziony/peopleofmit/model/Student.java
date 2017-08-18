@@ -16,6 +16,8 @@ public class Student extends Person {
     // getters
     public int getYearOfStudy() {return yearOfStudy;}
 
+
+
     // randomly set student year of study
     // data not available in DB, for presentation purpose
     private int setRandomYearOfStudy(){
